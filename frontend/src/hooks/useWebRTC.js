@@ -143,6 +143,7 @@ export const useWebRTC = (roomId, user) => {
         delete connections.current[peerId];
         delete audioElements.current[peerId];
         setClients((list) => list.filter((c) => c.id !== userId));
+        alert("Please reload the page");
       }
       async function handleIceCandidate({ peerId, icecandidate }) {
         if (icecandidate) {
